@@ -1,0 +1,66 @@
+
+
+
+
+.grid-courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+    margin-top: 20px;
+   
+}
+
+.box{
+    padding-top: 0;
+    padding-left: 0;
+}
+.image{
+    position: relative;
+}
+
+.image img:first-child{
+  max-width: 100%;
+   
+}
+
+.image img:last-child{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top:20px;
+    left: 20px;
+    border: 2px solid white;
+   
+}
+
+.box .title{
+    padding: 20px;
+    border-bottom: 1px solid #eee ;
+    position: relative;
+}
+
+
+.title span{
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--blue-color);
+    bottom:-15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+}
+
+.courseShare{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color:var(--grey-color);
+    align-items: center;
+}
+
+.courseShare i{
+    margin-right: 5px;
+}

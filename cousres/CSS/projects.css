@@ -1,0 +1,128 @@
+.box{
+    margin: 30px 0;
+}
+
+.title span{
+    font-weight: 500;
+}
+.title p{
+    font-size: 10px ;
+}
+
+.images{
+        padding: 10px ;
+    border-bottom: 1px solid #eee ;
+}
+.images img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: -15px;
+    border: 2px solid white;
+
+    }
+
+    .generalInfo{
+       display: flex;
+       justify-content: right;
+       gap: 10px;
+       padding: 10px;
+          border-bottom: 1px solid #eee ;
+        font-size: 14px;
+
+    }
+    
+    .generalInfo li{
+        padding: 5px;
+        background-color: #eee;
+        border-radius: 5px;
+        width: fit-content;
+    }
+
+    .ratio{
+        width: 300px;
+        height: 7px;
+        border-radius: 5px;
+        background-color: #eee;
+        display: block;
+        position: relative;
+   
+    }
+
+    .ratio::before{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 7px;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+
+        background-color: red;
+    }
+
+    .ratioBox{
+        display: flex;
+        justify-content: space-between;
+        padding:10px ;
+        margin-top: 10px;
+        align-items: center;
+         gap: 10px;
+
+    }
+   
+ 
+   .box:nth-of-type(2) .ratio::before{
+    width: 90%;
+    background-color: var(--green-color);
+
+   }
+
+    .box:nth-of-type(3) .ratio::before{
+    width: 100%;
+    background-color: var(--blue-color);
+
+   }
+
+     .box:nth-of-type(4) .ratio::before{
+    width: 60%;
+    background-color: var(--green-color);
+
+   }
+
+      .box:nth-of-type(5) .ratio::before{
+    width: 60%;
+    background-color: var(--green-color);
+
+   }
+
+     .box:nth-of-type(6) .ratio::before{
+    width: 30%;
+    background-color: var(--red-color);
+
+   }
+
+    .box:nth-of-type(7) .ratio::before{
+    width: 60%;
+    background-color: var(--green-color);
+
+   }
+    .box:nth-of-type(8) .ratio::before{
+    width: 60%;
+    background-color: var(--green-color);
+
+   }
+    .box:nth-of-type(9) .ratio::before{
+    width: 80%;
+    background-color: var(--green-color);
+
+   }
+    @media(max-width:700px){
+        .ratioBox,.generalInfo{
+         flex-direction: column;
+         
+        }
+
+        
+
+        
+    }

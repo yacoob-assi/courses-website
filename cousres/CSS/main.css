@@ -1,0 +1,239 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0d69d5;
+}
+
+.topBar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topBar .rightSide {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+}
+
+.topBar .notifications {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.topBar .notifications::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: -2px;
+}
+
+.topBar .notifications i {
+    font-size: 19px;
+}
+
+.topBar img {
+    width: 30px;
+    height: 30px;
+}
+
+.topBar .searchBox {
+    border: 1px solid #ccc;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.topBar .searchBox input {
+    padding: 5px;
+    font-size: 12px;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.topBar .searchBox input:focus {
+    width: 150px;
+}
+
+.topBar .searchBox input:focus::placeholder {
+    color: transparent;
+}
+
+.container {
+    background-color: var(--main-color);
+    padding: 15px;
+}
+
+.container .grid {
+    margin: 20px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 550px) {
+    .container .grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+.page {
+    display: flex;
+}
+
+.body {
+    overflow-x: auto;
+    flex: 10;
+}
+
+
+.sideBar {
+    padding: 10px 15px;
+    box-shadow: 0 0 10px #ddd;
+    z-index: 10;
+    flex: 1;
+}
+
+.sideBar .title {
+    text-align: center;
+    margin: 10px auto 30px;
+    position: relative;
+    width: fit-content;
+    height: 40px;
+}
+
+.sideBar .title::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.sideBar .title::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: black;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info {
+    line-height: 1;
+}
+
+.sideBar li {
+    display: inline-block;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.sideBar li:hover {
+    background-color: #f6f6f6;
+}
+
+.sideBar a {
+    color: black;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.box {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    padding: 10px;
+}
+
+.box p {
+    color: var(--grey-color);
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.box p:not(.secondTitle) {
+    font-size: 15px;
+}
+
+.box .title {
+    margin-bottom: 20px;
+}
+
+.no-grid {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.secondTitle {
+    font-size: 13px;
+}
+
+textarea{  
+    width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  font-size: 13px;
+  margin-bottom: 50px;}
+
+  .mainTitle {
+  width: fit-content;
+  position: relative;
+  padding-bottom: 10px;
+  height: fit-content;
+}
+
+.mainTitle::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.mainTitle::before {
+  content: "";
+  width: 25%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+

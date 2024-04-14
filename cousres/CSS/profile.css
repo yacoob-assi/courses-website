@@ -1,0 +1,210 @@
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box:first-of-type{
+    padding-top: 0;
+   padding-right: 0;
+  width: 100%;
+}
+
+.box:nth-of-type(2){
+  
+flex: 1;
+}
+
+.box:last-of-type{
+flex: 3;}
+
+.flex>div:first-child{
+    display: flex;
+    align-items: center;
+    gap:20px
+}
+.flex>div:first-child .title{
+   display: flex;
+flex-direction: column; 
+align-items: center;
+padding: 0 20px;
+text-align: center;
+gap:20px
+}
+
+.flex>div:first-child .Name{
+position: relative;
+line-height: 1;
+
+
+}
+
+.flex>div:first-child .Name::before{
+    content: '';
+    height: 6px;
+    width: calc(100% + 20px);
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #eee;
+    border-radius: 5px;
+
+    
+
+}
+
+
+.flex>div:first-child .Name::after{
+    content: '';
+    height: 6px;
+    width: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color:var(--blue-color);
+    border-radius: 5px 0 0 5px;
+    
+
+}
+
+
+.flex>div:first-child .title i{
+    color: var(--orange-color);
+    font-size: 14px;
+
+}
+
+.text{
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+
+.flex>div:first-child div:nth-child(2){
+    width: 100%;
+}
+
+.title img{
+    width: 100px;
+}
+.profileList{
+    flex: 1;
+}
+.profileList li{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding:10px ;
+
+}
+
+.profileList li{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  align-items: center;
+  gap: 20px;
+}
+
+.profileList li:hover{
+    background-color: #eee;
+
+}
+.profileList label{
+     width: 100px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+    
+}
+
+.profileList input{
+    display: none;
+}
+.profileList li label::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.profileList input:checked+label{
+    background-color: var(--blue-color);
+}
+
+.profileList input:checked + label::before{
+    transform: translateX(80px);
+    content: "\f00c";
+    color: var(--blue-color);
+}
+
+.profileList span:not(.text){
+    font-size:15px ;
+    margin-left: 5px;
+}
+
+@media(max-width:750px){
+    .box:first-of-type{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+ 
+    .box:first-of-type li{
+        grid-template-columns: repeat(auto-fit,minmax(100px,200px));
+       justify-content: space-around;
+    }
+}
+
+.generalInfo li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee;
+
+}
+
+.generalInfo li span{
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.activites li{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee ;
+    text-align: center;
+    line-height: 1.5;
+
+}
+
+.activites li img{
+    width: 60px;
+    height: 60px;
+}
+
+.activites li>div:first-child{
+    display: flex;
+    text-align: left;
+    gap: 10px;
+
+}

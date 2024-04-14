@@ -1,0 +1,266 @@
+.borderText {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 10px;
+    background-color: #f6f6f6;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 12px;
+
+}
+
+.socialInfo li {
+    margin: 10px 0;
+    position: relative;
+}
+
+
+.socialInfo li {
+    position: relative;
+    margin-left: 40px;
+}
+
+.socialInfo li::before {
+    font-family: "Font Awesome 6 Brands";
+
+    width: 40px;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: #f6f6f6;
+    z-index: 1;
+    color: var(--grey-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+
+.socialInfo li:first-child:before {
+    content: "\f099";
+}
+
+.socialInfo li:nth-child(2):before {
+    content: "\f39e";
+}
+
+.socialInfo li:nth-child(3):before {
+    content: "\f08c";
+}
+
+.socialInfo li:last-child:before {
+    content: "\f167";
+}
+
+.socialInfo li:focus-within::before {
+    color: black;
+}
+
+.generalInfo li{
+    margin: 10px 0;
+}
+
+.generalInfo li input{
+    margin-top: 10px;
+    background-color: white;
+}
+
+.generalInfo label{
+    color: var(--grey-color)
+}
+
+
+.generalInfo li:last-child input{
+        background-color: #f0f4f8;
+        
+}
+
+.generalInfo li:last-child input::placeholder{
+    color:#bbb
+}
+
+textarea{
+    background-color: white;
+}
+
+.control{
+    border: 1px solid #ccc;
+}
+
+.securityInfo{
+    height: 70px;
+    border-bottom: 1px solid #eee;
+    margin-top: 20px;
+}
+.securityInfo input{
+    display: none;
+}
+
+.securityInfo:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.securityInfo label{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ccc;
+    transform: translateY(5px);
+    position: relative;
+    cursor: pointer;
+}
+.securityInfo label::before{
+ font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+        
+}
+
+.securityInfo input:checked+label{
+    background-color: var(--blue-color);
+}
+
+.securityInfo input:checked + label::before{
+    transform: translateX(60px);
+    content: "\f00c";
+    color: var(--blue-color);
+}
+
+
+
+
+
+.WidgetList li{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.WidgetList input{
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+     margin-left: 20px;
+
+}
+
+.WidgetList label{
+    position: relative;
+    cursor: pointer;
+   
+ }
+
+.WidgetList label::before{
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: calc(50% - 7px) ;
+  left: -30px;
+  border-radius: 5px;
+  border: 2px solid var(--grey-color);
+  transition: 0.3s;
+  
+ 
+}
+
+.WidgetList label::after{
+  font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+    position: absolute;
+    left:-30px;
+     top: calc(50% - 7px) ;
+ 
+}
+.WidgetList label:hover::before{
+    border-color: #0d69d5;
+}
+
+.WidgetList input:checked + label::after{
+        transform: scale(1) rotate(0deg);
+
+}
+
+.back li{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.back input{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    visibility: hidden;
+}
+ .back  label{
+    position: relative;
+    cursor: pointer;
+   
+ }
+.back  label::before{
+    content: '';
+     position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -11px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    
+
+}
+.back  label::after{
+    content: '';
+      position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--blue-color);
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: scale(0);
+    
+}
+
+.back input:checked +label::before{
+  border-color: var(--blue-color);
+}
+
+.back input:checked +label::after{
+    transform: scale(1);
+}
+
+
+
