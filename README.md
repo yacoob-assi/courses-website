@@ -7,5 +7,9 @@ The projects page displays all the projects and their progress, along with the t
 The courses page lists the courses that the channel has created, while the files page provides access to the files that the channel offers.
 
 
-https://github.com/yacoob-assi/courses-website/assets/78143481/602a792a-47a6-4781-8c5d-791a24c91413
+
+
+
+
+https://github.com/yacoob-assi/courses-website/assets/78143481/12542dca-e5a4-4abb-9d1d-15e208e15e3e
 
